@@ -14,22 +14,27 @@ header section nav{
     height: 100%;
 }
 header nav ul li a{
-    color: white;
+    color: black;
+    transition: transform .2s; /* Animation */
+    margin: 0 auto;
+
 }
 header nav ul li a:hover{
-    color: lightsteelblue;
+    color: white;
     text-decoration: none;
+    transform: scale(1.5);
+    zoom: 100%;
 }
 .logo{
     margin: 0px;
 }
 .logo a{
     font-family: 'Fjalla One', sans-serif;
-    color: white;
+    color: black;
 }
 .logo a:hover {
     text-decoration: none;
-    color: white;
+    color: white
 }
 header ul{
     margin: 0;
@@ -38,11 +43,12 @@ header ul{
 }
 header div.uk-navbar-center ul li{
     padding: 0 10px;
-    border-right: 1px solid white;
+    border-right: 1px solid black;
 }
 header div.uk-navbar-center ul li:nth-last-child(1){
     border-right: none;
+    color: black;
 }
 header nav form input, header nav form ::placeholder, header nav form span{
-    color: white !important;
+    color: black !important;
 }
