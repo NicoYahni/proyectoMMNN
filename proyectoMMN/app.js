@@ -33,6 +33,8 @@ app.use ("/registracion", rutaRegistracion);
 let rutaResultadoBusqueda = require ("./routes/resultadoBusqueda");
 app.use ("/resultadoBusqueda", rutaResultadoBusqueda);
 
+//Aca terminan nuestras rutas//
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
