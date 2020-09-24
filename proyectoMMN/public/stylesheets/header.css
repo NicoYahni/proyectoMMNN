@@ -2,21 +2,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
 /* FONTS */
 
-
 header{
     height: 55px;
     padding-top: 10px;
+    background-color: black;
 }
 header section{
     height: 100%;
+  
 }
 header section nav{
     height: 100%;
+
 }
 header nav ul li a{
-    color: black;
+    color: white;
     transition: transform .2s; /* Animation */
     margin: 0 auto;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
 
 }
 header nav ul li a:hover{
@@ -29,8 +33,10 @@ header nav ul li a:hover{
     margin: 0px;
 }
 .logo a{
-    font-family: 'Fjalla One', sans-serif;
-    color: black;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+    font-style: oblique;
+    font-weight: bold;
 }
 .logo a:hover {
     text-decoration: none;
@@ -40,15 +46,18 @@ header ul{
     margin: 0;
     padding: 0;
     list-style: none;
+    
 }
 header div.uk-navbar-center ul li{
     padding: 0 10px;
-    border-right: 1px solid black;
+    border-right: 1px solid white;
 }
 header div.uk-navbar-center ul li:nth-last-child(1){
     border-right: none;
-    color: black;
+    color: white;
 }
 header nav form input, header nav form ::placeholder, header nav form span{
-    color: black !important;
+    color:white !important;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
 }

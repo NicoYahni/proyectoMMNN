@@ -1,7 +1,8 @@
 article.post{
-    border: 1px solid lightgray;
+    border: 3px solid green;
     border-radius: 10px;
     margin-bottom: 10px;
+   
 }
 
 article.post div.info-usuario{
@@ -12,7 +13,7 @@ article.post div.info-usuario{
 article.post div.info-usuario img{
     border-radius: 50px;
     padding: 1px;
-    border: 1.5px solid red;
+    border: 1.5px solid green;
 }
 article.post div.info-usuario h4{
    margin: 8px 10px;
@@ -34,7 +35,7 @@ article.post div.post-reacciones div.post-pie{
     border-bottom: 1px solid lightgray;
 }
 article.post div.post-reacciones div.post-pie h5{
-    margin: 0;
+    margin: 100;
 }
 article.post div.post-reacciones div.post-pie p{
     margin: 0;

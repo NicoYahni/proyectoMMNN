@@ -39,8 +39,10 @@
                     <div class="uk-navbar-center">
                         <ul class="uk-flex uk-flex-between uk-flex-middle">
                             <li><a href="/home">Home</a></li>
-                            <li><a href="/agregarPost">Postear</a></li>
-                            <li><a href="/miPerfil">Perfil</a></li>
+                            <li><a href="/agregarPost">Agregar Post</a></li>
+                            <li><a href="/miPerfil">Mi Perfil</a></li>
+                            <li><a href="/login">LogIn</a></li>
+                            <li><a href="/registracion">Registrarse</a></li>
                         </ul>
                     </div>
                     <div class="uk-navbar-right">
@@ -62,7 +64,15 @@
         <div class="uk-section uk-section-small">
             <div class="uk-container uk-container-large uk-flex">
                 <form action="">
-                    <h2>(Formulario para agregar un post)</h2>
+                    <h2>
+                        <form id="frmRegistracion" class="agregarPost"  method="post">
+                            <h1>Agregar Post</h1>
+                            <input type="text" id="txtNombre" placeholder="Nombre" class="usuarioPost" name="nombreUsuario">
+                            <input type="password" id="txtPassword" placeholder="Contraseña" class="contraseñaPost" name="passwordUsuario">
+                            <input type="submit" class="botonPost" placeholder="Enviar">
+                          </form>
+
+                    </h2>
 
                 </form>
 
