@@ -62,31 +62,36 @@
 
     <main>
         <div class="uk-section uk-section-small">
-            <div class="uk-container uk-container-large uk-flex uk-flex-middle uk-flex-center">
-                <form action="">
+            <div class="uk-container uk-container-large uk-flex uk-flex-middle uk-flex-center contenedor-grande">
                     
-                    <h2>
                         <div class="contenedor-formulario">
+                            <div class="titulo"><h1>FalseBook</h1></div>
+                               <div class="fraseIngresarInfo"><p class="ingresarInfo">Ingresá tu información personal para crear una cuenta y estar conectado con el mundo!</p>
+                            </div>
                             <form id="frmRegistracion" class="box form-inline my-2 my-lg-0" action="/usuarios" method="post">
-                              <h1>Resgistrarse</h1>
                               <input class="form-control mr-sm-2" type="text" id="txtNombre" placeholder="Nombre" name="nombreUsuario">
+                              <br>
                               <input type="email" id="txtEmail" placeholder="Email" name="emailUsuario">
+                              <br>
                               <input type="password" id="txtPassword" placeholder="Contraseña" name="passwordUsuario">
-                              <input type="text" id="txtFechaNacimiento" placeholder="Fecha de Nacimiento (dd/mm/yyyy)" name="fechaDeNacimientoUsuario">
-                              <div class="Men">
+                              <br>
+                              <input type="date" id="txtFechaNacimiento" placeholder="Fecha de Nacimiento (dd/mm/yyyy)" name="fechaDeNacimientoUsuario">
+                              
+                             <p class="defineGenero">Seleccioná tu genero</p>
+                             <div class="Men">
                                 <input type="radio" class="S" name="S" value= "Men">  Men
                             </div>
-                             <br>
+                             
                              <div class="Wom">
                                   <input type="radio" class="S" name="S" value= "Women">Women
                             </div>
-                            <br>
+                            
                             <div class="Ot">
                                  <input type="radio" class="S" name="S" value= "Other"> Other
                             </div>
                                  <input type="submit" placeholder="Log In">
                             </form>
-                    </h2>
+                    
             
                 
             </div>
