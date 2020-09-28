@@ -4,6 +4,7 @@ let rutaAgregarPost = {
         res.render("agregarPost", )   
     }
 }
+ //<form action=""></form>// -->
 
 
 module.exports = rutaAgregarPost
