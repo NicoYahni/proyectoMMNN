@@ -3,12 +3,39 @@
     width: 200px;
     height: 30px;
 }
+main{
+    background-color: rgb(237, 250, 255);
+    margin: 0;
+  }
+  .contenedor-grande {
+    width: 30%;
+    border: 4px solid #3AAFA9 ;
+    padding: 3%;
+    background-color: rgb(244, 251, 254);
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .contenedor-formulario{
+    width: 100%;
+    margin: auto;
+    
+    
+  }
 
-.usuarioPost{
+  #frmRegistracion{
+    width: fit-content;
+    margin: auto;
+  }
+  .titulo{
+    width: fit-content;
+    margin: auto;
+  }
+
+/* .usuarioPost{
     color: black;
     width: 200px;
     height: 30px;
-}
+} */
 .botonPost{
     color: black;
     width: 200px;
