@@ -10,7 +10,7 @@ var usersRouter = require('./routes/users');
 var app = express();
 //Aca van nuestras rutas//
 let rutaHome = require ("./routes/home");
-app.use ("/home" , rutaHome);
+app.use ("/" , rutaHome);
 
 let rutaAgregarPost = require ("./routes/agregarPost");
 app.use ("/agregarPost", rutaAgregarPost);
