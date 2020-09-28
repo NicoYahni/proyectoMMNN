@@ -1,0 +1,24 @@
+main{
+  background-color: rgb(237, 250, 255);
+}
+.contenedor-grande {
+  width: 30%;
+  border: 4px solid rgb(144, 212, 225) ;
+  padding: 3%;
+  background-color: rgb(244, 251, 254);
+}
+
+.contenedor-formulario{
+  width: fit-content;
+  margin: auto;
+  
+}
+
+.titulo{
+  width: fit-content;
+  margin: auto;
+}
+#frmLogIn{
+  width: fit-content;
+  margin: auto;
+}

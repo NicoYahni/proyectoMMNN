@@ -62,23 +62,25 @@
 
     <main>
         <div class="uk-section uk-section-small">
-            <div class="uk-container uk-container-large uk-flex uk-flex-middle uk-flex-center">
-                <form action="">
+            <div class="uk-container uk-container-large uk-flex uk-flex-middle uk-flex-center contenedor-grande">
+            
 
 
-                    <h2>
+                   
                         <div class="contenedor-formulario">
-                            <form class="box form-inline my-2 my-lg-0" action="/validarUsuarioPassword" method="post">
-                              <h1>Login</h1>
-                              <input class="usuarioLogin" type="text" name="user" placeholder="Usuario">
+                           <div class="titulo"><h1>Login</h1></div>
+                           <form id="frmLogIn" class="box form-inline my-2 my-lg-0" action="/validarUsuarioPassword" method="post">
+                              
+                              <input class="usuarioLogin" type="text" name="user" placeholder="Usuario"><br>
                               <input type="hidden" name="fromPage" id="fromPage">
-                              <input class="form-control mr-sm-2" type="password" id="txtPassword" placeholder="Contraseña" name="password">
+                              <input class="form-control mr-sm-2" type="password" id="txtPassword" placeholder="Contraseña" name="password"><br>
                               <input type="submit" class="botonPost" placeholder="Enviar">
+                            </form>
                             </div>
-                    </h2>
+                    
                 
                 
-                </form>
+                
             </div>
         </div>
     </main>
