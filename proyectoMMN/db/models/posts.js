@@ -12,11 +12,11 @@ module.exports = (sequelize, DataTypes) => {
 
         },
         Texto_Posteo: {
-            type: DataTypes.VARCHAR
+            type: DataTypes.STRING
 
         },
         URL: {
-            type: DataTypes.VARCHAR
+            type: DataTypes.STRING
 
         },
         Fecha_Creacion: {
