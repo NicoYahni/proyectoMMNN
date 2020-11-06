@@ -8,15 +8,15 @@ module.exports = (sequelize, DataTypes) => {
 
         },
         Nombre: {
-            type: DataTypes.VARCHAR
+            type: DataTypes.STRING
 
         },
         Apellido: {
-            type: DataTypes.VARCHAR
+            type: DataTypes.STRING
 
         },
         Nombre_Usuario: {
-            type: DataTypes.VARCHAR
+            type: DataTypes.STRING
 
         },
         Nacimiento: {

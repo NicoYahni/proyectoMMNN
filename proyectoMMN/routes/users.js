@@ -6,6 +6,6 @@ router.get('/', function(req, res, next) {
   res.send('respond with a resource');
 });
 
-router.get("/register", controladorRegistracion.registracion)
+router.get("/register"), controladorRegistracion.registracion
 router.post("/register"), controladorRegistracion.storeUser
 module.exports = router;

@@ -16,7 +16,7 @@ module.exports = (sequelize, DataTypes) => {
 
         },
         comentario: {
-            type: DataTypes.VARCHAR
+            type: DataTypes.STRING
 
         },
         fecha: {
