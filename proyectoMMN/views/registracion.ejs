@@ -69,25 +69,19 @@
                                <div class="fraseIngresarInfo"><p class="ingresarInfo">Ingresá tu información personal para crear una cuenta y estar conectado con el mundo!</p>
                             </div>
                             <form id="frmRegistracion" class="box form-inline my-2 my-lg-0" action="/registracion" method="POST">
-                              <input class="form-control mr-sm-2" type="text" id="txtNombre" placeholder="Nombre" name="nombreUsuario">
+                              <input class="form-control mr-sm-2" type="text" id="txtNombre" placeholder="Nombre" name="nombre">
                               <br>
-                              <input type="email" id="txtEmail" placeholder="Email" name="emailUsuario">
+                              <input class="form-control mr-sm-2" type="text" id="txtApellido" placeholder="Apellido" name="apellido">
                               <br>
-                              <input type="password" id="txtPassword" placeholder="Contraseña" name="passwordUsuario">
+                              <input class="form-control mr-sm-2" type="text" id="txtNombreDeUsuario" placeholder="Nombre de Usuario" name="nombreUsuario">
                               <br>
-                              <input type="date" id="txtFechaNacimiento" placeholder="Fecha de Nacimiento (dd/mm/yyyy)" name="fechaDeNacimientoUsuario">
+                              <input type="email" id="txtEmail" placeholder="Email" name="email">
+                              <br>
+                              <input type="password" id="txtPassword" placeholder="Contraseña" name="password">
+                              <br>
+                              <input type="date" id="txtFechaNacimiento" placeholder="Fecha de Nacimiento (dd/mm/yyyy)" name="fechaDeNacimiento">
                               
-                             <p class="defineGenero">Seleccioná tu genero</p>
-                             <div class="Men">
-                                <input type="radio" class="S" name="S" value= "Men">  Men
-                            </div>
-                             
-                             <div class="Wom">
-                                  <input type="radio" class="S" name="S" value= "Women">Women
-                            </div>
-                            
-                            <div class="Ot">
-                                 <input type="radio" class="S" name="S" value= "Other"> Other
+                             ACA HAY QUE PONER QUE INGRESE LO QUE FALTA QUE PUSIMOS EN EL CONTROLADOR EJEMPLO MAIL Y password
                             </div>
                                  <input type="submit" placeholder="Log In">
                             </form>
