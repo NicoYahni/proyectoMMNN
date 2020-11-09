@@ -1,4 +1,5 @@
 let db = require("../db/models/index")
+let bcrypt = require("bcryptjs");
 
 let rutaRegistracion = {
 
@@ -10,7 +11,7 @@ let rutaRegistracion = {
         let apellido = req.body.apellido
         let nombreUsuario = req.body.nombreUsuario
         let mail = req.body.email
-        let password = req.body.password
+        let password = bcrypt.hashSync(req.body.password, 100)
         let fec_nac = req.body.fechaDeNacimiento
     
         
