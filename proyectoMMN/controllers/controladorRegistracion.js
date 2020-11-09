@@ -11,8 +11,8 @@ let rutaRegistracion = {
         let apellido = req.body.apellido
         let nombreUsuario = req.body.nombreUsuario
         let mail = req.body.email
-        let password = bcrypt.hashSync(req.body.password, 100)
-        let fec_nac = req.body.fechaDeNacimiento
+        let password = bcrypt.hashSync(req.body.password)
+        let fecnac = req.body.fechaDeNacimiento
     
         
         let usuario = {
@@ -21,7 +21,7 @@ let rutaRegistracion = {
             Nombre_Usuario : nombreUsuario,
             Mail : mail,
             Password : password,
-            Nacimiento : fec_nac
+            Nacimiento : fecnac
             
         }
         console.log(usuario)  
