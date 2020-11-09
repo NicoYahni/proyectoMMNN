@@ -4,7 +4,6 @@ var controladorRegistracion = require ("../controllers/controladorRegistracion")
 
 
 router.get ("/registracion", controladorRegistracion.registracion)
-
 router.post ("/registracion", controladorRegistracion.storeUser)
 
 router.get ("/", controladorRegistracion.registracion)
