@@ -22,8 +22,6 @@ let rutaRegistracion = {
             Password : password,
             Nacimiento : fec_nac
             
-            
-            
         }
                 
         db.Usuario.create(usuario)
