@@ -1,9 +1,19 @@
-let rutaLogin = {
+const bcrypt = require ('bcryptjs');
+const db = require('../database/models');
+const users = db.User;
 
-    login: function(req, res) {
-        res.render("login", )   
-    }
+const op = db.Sequelize.Op;
+
+let controladorLogin = {
+    index: function(req, res){
+        return res.render('login');
+        },
+
+        login: function(req, res){
+
+
+        },
+        
 }
 
-
-module.exports = rutaLogin
+module.exports = controladorLogin
