@@ -3,8 +3,8 @@ var router = express.Router();
 var controladorResultadoBusqueda = require ("../controllers/controladorResultadoBusqueda");
 
 router.get ("/", controladorResultadoBusqueda.resultadoBusqueda)
-router.get("/register", controladorRegistracion.registracion)
-router.post("/register"), controladorRegistracion.storeUser
+// router.get("/register", controladorRegistracion.registracion)
+// router.post("/register"), controladorRegistracion.storeUser
 
 
 module.exports = router;
