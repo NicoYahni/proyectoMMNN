@@ -18,14 +18,16 @@ let rutaRegistracion = {
             Nombre : nombre,
             Apellido : apellido,
             Nombre_Usuario : nombreUsuario,
-            Email : mail,
+            Mail : mail,
             Password : password,
             Nacimiento : fec_nac
             
         }
-                
+        console.log(usuario)  
+        
+        
         db.Usuario.create(usuario)
-        .then(function() {
+       .then(function() {
         res.redirect("/home")
         })
     }
