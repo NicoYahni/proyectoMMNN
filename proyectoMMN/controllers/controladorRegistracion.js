@@ -3,7 +3,7 @@ let db = require("../db/models/index")
 let rutaRegistracion = {
 
     registracion: function(req, res) {
-        res.render("registracion")   
+        res.render('registracion')   
     },
     storeUser: function(req, res) {
         let nombre = req.body.nombre
