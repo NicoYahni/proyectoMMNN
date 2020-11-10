@@ -12,15 +12,14 @@ let controladorLogin = {
 
         login: function(req, res){
             users.findOne(
-                where: [{ email: req.body.email }]
+                where [{ email: req.body.email }]
              )
             .then( function (user) {
                 if(user == null) {
-                    retun res.send("email incorrecto");
-
+                    retun; res.send("email incorrecto")
                 } else if (bcrypt.compareSync(req.body.password, user.password == false)) {
                     return res.send("contraseña incorrecta")
-                } else if (bcrypt.compareSync(req.body.password, user.password) {
+                } else if (bcrypt.compareSync(req.body.password, user.password) ){
                     
                     req.session.user = user
                     return res.redirect('/home')
