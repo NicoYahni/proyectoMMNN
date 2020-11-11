@@ -6,9 +6,27 @@ let rutaResultadoBusqueda = {
         let usuarioBuscado = req.query.usuarioBuscado
         db.Usuario.findAll(
             {
-            where: [
-           { Nombre_Usuario : {[op.like]: '%' + usuarioBuscado + '%'}}
-           ] 
+            where:  {
+                [op.or]: [
+                  {
+                    Nombre_Usuario: {
+                      [op.like]: '%' + usuarioBuscado + '%'
+                    }
+                  },
+                  {
+                    Mail: {
+                      [op.like]: '%' + usuarioBuscado + '%'
+                    }
+                  }
+                ]
+              }
+            
+            
+            
+            //[
+           //{ Nombre_Usuario : {[op.like]: '%' + usuarioBuscado + '%'}},
+           //{ Nombre_Usuario : {[op.like]: '%' + usuarioBuscado + '%'}}
+           //] 
         }
            
 
