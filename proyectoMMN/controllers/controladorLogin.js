@@ -1,6 +1,6 @@
 const bcrypt = require ('bcryptjs');
 const db = require('../db/models');
-const users = db.User;
+const users = db.Usuario;
 
 const op = db.Sequelize.Op;
 
@@ -11,12 +11,14 @@ let controladorLogin = {
 
 
         login: function(req, res){
-            users.findOne(
-                where [{ email: req.body.email }]
-             )
+            users.findOne({
+                where: [{ Nombre_Usuario: req.body.user }]
+            })
             .then( function (user) {
+                console.log(res.body)
+                console.log(user)
                 if(user == null) {
-                    retun; res.send("email incorrecto")
+                    return res.send("email incorrecto")
                 } else if (bcrypt.compareSync(req.body.password, user.password == false)) {
                     return res.send("contraseña incorrecta")
                 } else if (bcrypt.compareSync(req.body.password, user.password) ){
