@@ -15,8 +15,10 @@ let controladorLogin = {
                 where: [{ Nombre_Usuario: req.body.user }]
             })
             .then( function (user) {
+                console.log(res.body)
+                console.log(user)
                 if(user == null) {
-                    retun; res.send("email incorrecto")
+                    return res.send("email incorrecto")
                 } else if (bcrypt.compareSync(req.body.password, user.password == false)) {
                     return res.send("contraseña incorrecta")
                 } else if (bcrypt.compareSync(req.body.password, user.password) ){
