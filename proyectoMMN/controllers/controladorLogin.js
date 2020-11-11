@@ -15,13 +15,14 @@ let controladorLogin = {
                 where: [{ Nombre_Usuario: req.body.user }]
             })
             .then( function (user) {
-                console.log(res.body)
+                console.log(req.body)
                 console.log(user)
                 if(user == null) {
-                    return res.send("email incorrecto")
-                } else if (bcrypt.compareSync(req.body.password, user.password == false)) {
+                    return res.send("Usuario y/o contraseña incorrecto")
+                } 
+                else if (bcrypt.compareSync(req.body.password, user.Password) == false) {
                     return res.send("contraseña incorrecta")
-                } else if (bcrypt.compareSync(req.body.password, user.password) ){
+                } else if (bcrypt.compareSync(req.body.password, user.Password) ){
                     
                     req.session.user = user
                     return res.redirect('/home')
