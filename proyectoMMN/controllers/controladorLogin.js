@@ -1,6 +1,6 @@
 const bcrypt = require ('bcryptjs');
 const db = require('../db/models');
-const users = db.User;
+const users = db.Usuario;
 
 const op = db.Sequelize.Op;
 
@@ -11,9 +11,9 @@ let controladorLogin = {
 
 
         login: function(req, res){
-            users.findOne(
-                where [{ email: req.body.email }]
-             )
+            users.findOne({
+                where: [{ Nombre_Usuario: req.body.user }]
+            })
             .then( function (user) {
                 if(user == null) {
                     retun; res.send("email incorrecto")
