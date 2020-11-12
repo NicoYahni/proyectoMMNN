@@ -32,10 +32,16 @@ let rutaResultadoBusqueda = {
 
         )
         .then(function(usuarios){
-            console.log(usuarios)
+            if (usuarios == 0) {
+              res.render('/home')
+              // aca me esta tirando error. esta es la parte en la que habria que mandar un mensaje en la vista resultadoBusqueda.ejs 
+              // que diga. "Lo sentimos! no encontramos ningun usuario"
+            } else {
+              res.render('resultadoBusqueda', {usuarios: usuarios})
+            }
 
     
-        res.render('resultadoBusqueda', {usuarios: usuarios})
+        
         })
 
         
