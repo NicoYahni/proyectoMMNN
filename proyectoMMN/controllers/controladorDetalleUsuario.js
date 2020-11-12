@@ -1,9 +1,11 @@
-let rutaDetalleUsuario = {
+let controladorDetalleUsuario = {
 
     detalleUsuario: function(req, res) {
-        res.render("detalleUsuario", )   
+        let idUsuario = req.params.id
+
+        res.render("detalleUsuario", {idUsuario: idUsuario})   
     }
 }
 
 
-module.exports = rutaDetalleUsuario
+module.exports = controladorDetalleUsuario

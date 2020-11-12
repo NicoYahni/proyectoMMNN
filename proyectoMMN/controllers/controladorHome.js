@@ -5,7 +5,7 @@ let controladorHome = {
         db.Post.findAll()
         .then(function(posteos) {
             console.log(posteos)
-        //res.render('home', {posteos: posteos})
+        res.render('home', {posteos: posteos})
         })
         
 
