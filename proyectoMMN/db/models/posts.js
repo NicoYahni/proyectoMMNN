@@ -1,13 +1,13 @@
 module.exports = (sequelize, DataTypes) => {
 
     let cols = {
-        idPost: {
+        IdPost: {
             type: DataTypes.INTEGER,
             autoIncrement: true,
             primaryKey: true
 
         },
-        id_usuario: {
+        Id_usuario: {
             type: DataTypes.INTEGER
 
         },
@@ -26,7 +26,7 @@ module.exports = (sequelize, DataTypes) => {
 
 
     let config = {
-        tableName: "posts",
+        tableName: "Posts",
         timestamps: false
     }
 

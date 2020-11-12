@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 var controladorDetalleUsuario = require ("../controllers/controladorDetalleUsuario");
 
-router.get ("/", controladorDetalleUsuario.detalleUsuario)
+router.get ("/:id", controladorDetalleUsuario.detalleUsuario)
 
 
 
