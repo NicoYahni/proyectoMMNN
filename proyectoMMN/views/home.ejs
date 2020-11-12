@@ -30,6 +30,9 @@
 
 <body>
     <%- include("headerDeslogueado") %>
+    <% if(locals.user) { %>
+        <h2>Hola: <%= locals.user.name %> </h2>
+        <% } %>
 
     <main>
       
