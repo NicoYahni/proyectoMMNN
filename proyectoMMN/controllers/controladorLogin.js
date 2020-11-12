@@ -25,15 +25,17 @@ let controladorLogin = {
                 } else if (bcrypt.compareSync(req.body.password, user.Password) ){
                     
                     req.session.user = user
+                    console.log(user);
+                    if(req.body.rememberme != undefined) {
+                        res.cookie('usuario', user.id, {maxAge : 20*1000})
+                    }
                     return res.redirect('/home')
                 }
 
             })
             .catch( e => console.log(e))
 
-            if(req.body.rememberme != undefined) {
-                res.cookie('userId', user.id, {maxAge : 20*1000})
-            }
+           
 
 
         },

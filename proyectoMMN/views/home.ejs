@@ -30,7 +30,7 @@
 
 <body>
     <%- include("headerDeslogueado") %>
-    <% if(locals.user) { %>
+    <% if (typeof user != "undefined" && user != null) { %>
         <h2>Hola: <%= user.Nombre %> </h2>
         <% } %>
     

@@ -13,4 +13,6 @@ router.post("/register"), controladorRegistracion.storeUser
 router.get("/registracion"), controladorRegistracion.registracion
 router.post("/registracion"), controladorRegistracion.storeUser
 
+
+
 module.exports = router;
