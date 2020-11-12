@@ -39,13 +39,14 @@
                 <ul>
                     <% for( let i = 0; i < usuarios.length; i++) {%>
                         <li>
-                            <%= usuarios[i].Nombre_Usuario%>
+                            <a href="detalleUsuario/<%usuarios[i].IdUsuario%>"><%= usuarios[i].Nombre_Usuario%></a>
                         </li>
                         <%}%>
+                        
                     
                     
                 </ul>
-
+<p>no entiendo el error porque no lleva el id a la url</p>
             </div>
         </div>
     </main>
