@@ -31,6 +31,10 @@ let controladorLogin = {
             })
             .catch( e => console.log(e))
 
+            if(req.body.rememberme != undefined) {
+                res.cookie('userId', user.id, {maxAge : 20*1000})
+            }
+
 
         },
         
