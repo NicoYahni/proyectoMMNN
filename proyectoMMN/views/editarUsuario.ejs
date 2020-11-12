@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alkiline</title>
+    <link rel="icon"
+        href="images/fotourl.jpg"
+        type="image/x-icon">
+
+    <link rel="stylesheet" href="stylesheets/home.css">
+    <link rel="stylesheet" href="stylesheets/header.css">
+    <link rel="stylesheet" href="stylesheets/footer.css">
+    <link rel="stylesheet" href="stylesheets/general.css">
+
+    <!-- UiKit -->
+    <!-- <link rel="stylesheet" href="css/uikit.min.css">
+    <script src="js/uikit-icons.min.js"></script>
+    <script src="js/uikit.min.js"></script> -->
+    <!-- UiKit -->
+    
+    <!-- UIkit CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.5.5/dist/css/uikit.min.css" />
+    
+    <!-- UIkit JS -->
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.5/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.5/dist/js/uikit-icons.min.js"></script>
+</head>
+
+<body>
+    <%- include("headerLogueado") %>
+
+    <main>
+        
+        <form id="frmRegistracion" class="box form-inline my-2 my-lg-0" action="/registracion" method="POST">
+            <input class="form-control mr-sm-2" type="text" id="txtNombre" placeholder="Nombre" name="nombre">
+            <br>
+            <input class="form-control mr-sm-2" type="text" id="txtApellido" placeholder="Apellido" name="apellido">
+            <br>
+            <input class="form-control mr-sm-2" type="text" id="txtNombreDeUsuario" placeholder="Nombre de Usuario" name="nombreUsuario">
+            <br>
+            <input type="email" id="txtEmail" placeholder="Email" name="email">
+            <br>
+            <input type="password" id="txtPassword" placeholder="Contraseña" name="password">
+            <br>
+            <input type="date" id="txtFechaNacimiento" placeholder="Fecha de Nacimiento (dd/mm/yyyy)" name="fechaDeNacimiento">
+            
+           
+          </div>
+               <input type="submit" placeholder="Log In">
+          </form>
+          
+
+
+
+
+
+    </main>
+
+    <footer class="uk-position-bottom uk-position-fixed uk-background-primary uk-flex uk-flex-between uk-flex-middle">
+        <ul class="uk-width-1-6 uk-flex uk-flex-middle uk-flex-around uk-height-1-1 uk-margin-remove uk-padding-remove">
+            <li><a href="" uk-icon="instagram"></a></li>
+            <li><a href="" uk-icon="facebook"></a></li>
+            <li><a href="" uk-icon="twitter"></a></li>
+        </ul>
+        <ul class="uk-width-1-3 uk-flex uk-flex-middle uk-flex-between uk-height-1-1 uk-margin-remove uk-padding-remove">
+            <li>Manuel Simon</li>
+            <li>Marcos Hogg</li>
+            <li>Nicolas Yahni</li>
+        </ul>
+    </footer>
+
+</body>
+
+</html>

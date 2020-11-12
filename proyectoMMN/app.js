@@ -47,6 +47,9 @@ app.use ("/registracion", rutaRegistracion);
 let rutaResultadoBusqueda = require ("./routes/resultadoBusqueda");
 app.use ("/resultadoBusqueda", rutaResultadoBusqueda);
 
+let rutaEditarUsuario = require ("./routes/editarUsuario");
+app.use ("/editarUsuario", rutaEditarUsuario);
+
 //Aca terminan nuestras rutas//
 
 // view engine setup
