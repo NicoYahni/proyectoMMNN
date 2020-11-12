@@ -1,4 +1,7 @@
 <header class="uk-background-primary">
+    <% if(locals.user) { %>
+        <h2>Hola: <%= locals.user.name %> </h2>
+        <% } %>
     <section class=" uk-container uk-container-large">
         <div class="">
             <nav class="" uk-navbar>

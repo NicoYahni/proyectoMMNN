@@ -22,6 +22,14 @@ app.use(session(
   ));
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.use(function(req, res, next) {
+  if(req.session.user != undefined) {
+    res.locals.user = req.session.user
+  }
+
+  return next();
+})
+
 //Aca van nuestras rutas//
 let rutaHome = require ("./routes/home");
 app.use ("/home" , rutaHome);
