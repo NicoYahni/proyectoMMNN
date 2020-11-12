@@ -1,8 +1,16 @@
 let db = require('../db/models/index')
+let op = db.Sequelize.Op;
 let controladorHome = {
 
     home: function(req,res) {
-        db.Post.findAll()
+        db.Post.findAll(
+            {
+                order: ["Fecha_Creacion"]
+            }
+               
+    
+            )
+        
         .then(function(posteos) {
             console.log(posteos)
         res.render('home', {posteos: posteos})
