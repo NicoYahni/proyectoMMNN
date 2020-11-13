@@ -1,8 +1,14 @@
 let rutaMiPerfil = {
 
     miPerfil: function(req, res) {
-        res.render("miPerfil", )   
-    }
+        let idUsuario = req.params.id
+
+        db.Usuario.findByPk(idUsuario)
+        .then (function(usuario){
+            
+        res.render("miPerfil", {usuario: usuario })   
+    })
+}
 }
 
 
