@@ -2,6 +2,10 @@ let rutaAgregarPost = {
 
     agregarPost: function(req, res) {
          res.render("agregarPost",{usuarioLogueado : req.session.user})
+         if (req.session.usuarioLogueado == undefined){
+            res.redirect("/login");
+            }
+            
     },
         storePost: function(req, res) {
             let posteos = {

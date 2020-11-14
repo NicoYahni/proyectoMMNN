@@ -1,6 +1,10 @@
 let rutaMiPerfil = {
 
     miPerfil: function(req, res) {
+        if (req.session.usuarioLogueado == undefined){
+            res.redirect("/login");
+            }
+            
         let idUsuario = req.params.id
 
         db.Usuario.findByPk(idUsuario)

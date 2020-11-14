@@ -4,6 +4,10 @@ let bcrypt = require("bcryptjs");
 let rutaRegistracion = {
 
     registracion: function(req, res) {
+        if (req.session.usuarioLogueado != undefined){
+            res.redirect("/home");
+            }
+            
         res.render('registracion', {usuarioLogueado : req.session.user})   
     },
     storeUser: function(req, res) {
