@@ -1,3 +1,4 @@
+let db = require("../db/models/index")
 let rutaAgregarPost = {
 
     agregarPost: function(req, res) {
@@ -11,10 +12,15 @@ let rutaAgregarPost = {
             let posteos = {
                 Texto_Posteo: req.body.textoPublicado,
                 Fecha_Creacion: req.body.Fecha_Creacion,
-                URL: req.body.url
+                URL: req.body.url,
+                Id_usuario: req.body.Id_usuario
               }
-        }
-}
+
+        db.Post.create(posteos)
+        .then(function() {
+         return res.redirect("/home")
+         })
+}}
  //<form action=""></form>// -->
 
 
