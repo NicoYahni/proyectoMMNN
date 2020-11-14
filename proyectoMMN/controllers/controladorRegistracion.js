@@ -18,10 +18,10 @@ let rutaRegistracion = {
         let password = bcrypt.hashSync(req.body.password)
         let fecnac = req.body.fechaDeNacimiento
         let pregunta = req.body.preguntaSeguridad
-        let respuesta = req.body.respuestaSeguridad
+        // let respuesta = req.body.respuestaSeguridad
         // no me deja encriptar la respuesta de seguridad. cuando la mando encriptada me queda cargando en el registro
         // cuando va normal se manda bien
-        //  let respuesta = bcrypt.hashSync(req.body.respuestaSeguridad)
+         let respuesta = bcrypt.hashSync(req.body.respuestaSeguridad)
     
         
         let usuario = {
