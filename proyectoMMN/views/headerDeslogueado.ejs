@@ -18,7 +18,7 @@
                         <ul class="uk-flex uk-flex-between uk-flex-middle">
                             <li><a href="/home">Home</a></li>
                             <% 
-                            if(usuarioLogueado =! undefined) { %>
+                            if(usuarioLogueado != undefined) { %>
                                     <li><a href="/agregarPost">Agregar Post</a></li>
                                       <li><a href="/miPerfil/<%usuarioLogueado.IdUsuario%>">Mi Perfil</a></li>
                            <% } else { %>
