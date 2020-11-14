@@ -4,7 +4,7 @@ let bcrypt = require("bcryptjs");
 let rutaRegistracion = {
 
     registracion: function(req, res) {
-        res.render('registracion')   
+        res.render('registracion', {usuarioLogueado : req.session.user})   
     },
     storeUser: function(req, res) {
         let nombre = req.body.nombre

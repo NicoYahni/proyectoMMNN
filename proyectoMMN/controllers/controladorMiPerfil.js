@@ -6,7 +6,7 @@ let rutaMiPerfil = {
         db.Usuario.findByPk(idUsuario)
         .then (function(usuario){
             
-        res.render("miPerfil", {usuario: usuario })   
+        res.render("miPerfil", {usuario: usuario, usuarioLogueado : req.session.user })   
     })
 }
 }

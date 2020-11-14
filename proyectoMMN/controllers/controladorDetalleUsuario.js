@@ -10,7 +10,7 @@ let controladorDetalleUsuario = {
         // y con eso mandar a la vista toda la info de ese usuario
         db.Usuario.findByPk(idUsuario)
         .then (function(usuario){
-            res.render("detalleUsuario", {usuario: usuario}) 
+            res.render("detalleUsuario", {usuario: usuario, usuarioLogueado : req.session.user}) 
         })
           
     }

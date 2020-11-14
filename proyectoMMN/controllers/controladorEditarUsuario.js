@@ -1,7 +1,7 @@
 let rutaEditarUsuario = {
 
     editarUsuario: function(req, res) {
-        res.render("editarUsuario", )   
+        res.render("editarUsuario", {usuarioLogueado : req.session.user})   
     }
 }
 
