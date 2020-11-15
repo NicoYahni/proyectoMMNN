@@ -67,6 +67,9 @@ app.use ("/postBuscado", rutaPostBuscado)
 let rutaEditarPerfil = require ("./routes/editarPerfil");
 app.use ("/editarPerfil", rutaEditarPerfil)
 
+let rutaEditarPost = require ("./routes/editarPost");
+app.use ("/editarPost", rutaEditarPost)
+
 //Aca terminan nuestras rutas//
 
 // view engine setup
