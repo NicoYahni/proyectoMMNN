@@ -64,6 +64,9 @@ app.use ("/logout", rutaLogout);
 let rutaPostBuscado = require ("./routes/postBuscado");
 app.use ("/postBuscado", rutaPostBuscado)
 
+let rutaEditarPerfil = require ("./routes/editarPerfil");
+app.use ("/editarPerfil", rutaEditarPerfil)
+
 //Aca terminan nuestras rutas//
 
 // view engine setup

@@ -33,18 +33,18 @@
 
     <main>
         
-        <form id="frmRegistracion" class="box form-inline my-2 my-lg-0" action="/registracion" method="POST">
-            <input class="form-control mr-sm-2" type="text" id="txtNombre" placeholder="Nombre" name="nombre">
+        <form id="frmeditarPerfil" class="box form-inline my-2 my-lg-0" action="/editarPerfil" method="POST">
+            <input class="form-control mr-sm-2" type="text" id="txtNombre" placeholder="Nombre" name="Nombre" value="<%= usuario.Nombre %>">
             <br>
-            <input class="form-control mr-sm-2" type="text" id="txtApellido" placeholder="Apellido" name="apellido">
+            <input class="form-control mr-sm-2" type="text" id="txtApellido" placeholder="Apellido" name="Apellido" value="<%= usuario.Apellido %>">
             <br>
-            <input class="form-control mr-sm-2" type="text" id="txtNombreDeUsuario" placeholder="Nombre de Usuario" name="nombreUsuario">
+            <input class="form-control mr-sm-2" type="text" id="txtNombreDeUsuario" placeholder="Nombre de Usuario" name="NombreUsuario" value="<%= usuario.Nombre_Usuario %>">
             <br>
-            <input type="email" id="txtEmail" placeholder="Email" name="email">
+            <input type="email" id="txtEmail" placeholder="Email" name="Mail" value="<%= usuario.Mail %>">
             <br>
-            <input type="password" id="txtPassword" placeholder="Contraseña" name="password">
+            <input type="password" id="txtPassword" placeholder="Contraseña" name="Password" value="<%= usuario.Password %>">
             <br>
-            <input type="date" id="txtFechaNacimiento" placeholder="Fecha de Nacimiento (dd/mm/yyyy)" name="fechaDeNacimiento">
+            <input type="date" id="txtFechaNacimiento" placeholder="Fecha de Nacimiento (dd/mm/yyyy)" name="Nacimiento" value="<%= usuario.Nacimiento %>">
             
            
           </div>
