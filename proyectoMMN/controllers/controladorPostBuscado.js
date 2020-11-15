@@ -20,6 +20,12 @@ let controladorPostBuscado = {
        
           
             }
+            // no puedo ordenarlos ni limitarlos
+            // ,
+            
+            // order: ["Fecha_Creacion 'ASC'"],
+            // limit: 5
+          
           
           
           
