@@ -1,9 +1,10 @@
-let rutaMiPerfil = {
+const db = require("../db/models/index")
+let controladorMiPerfil = {
 
     miPerfil: function(req, res) {
-        if (req.session.usuarioLogueado == undefined){
-            res.redirect("/login");
-            }
+       // if (req.session.user == undefined){
+         //   res.redirect("/login");
+           // }
             
         let idUsuario = req.params.id
 
@@ -16,4 +17,4 @@ let rutaMiPerfil = {
 }
 
 
-module.exports = rutaMiPerfil
+module.exports = controladorMiPerfil
