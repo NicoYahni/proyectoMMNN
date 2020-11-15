@@ -16,7 +16,7 @@ let controladorPostBuscado = {
          {
          where:  {
                 
-          Texto_Posteo : {[op.like]: '%' + postBuscado + '%'}
+          Texto_Posteo : {[op.like]: '%'+ postBuscado + '%'}
        
           
             }
