@@ -34,19 +34,19 @@
     <main>
         <div class="uk-section uk-section-small">
             <div class="uk-container uk-container-large uk-flex uk-flex-middle uk-flex-center">
-               
-                <h2>(Mostar resultados de busqueda)</h2>
-                <ul>
-                    <% for( let i = 0; i < usuarios.length; i++) {%>
+                <div class="uk-navbar-right">
+                    <ul class="uk-flex uk-flex-between uk-flex-middle">
                         <li>
-                            <a href="detalleUsuario/<%usuarios[i].IdUsuario%>"><%= usuarios[i].Nombre_Usuario%></a>
-                        </li>
-                        <%}%>
+                            <form action="./postBuscado/resultado" method= "GET" class="uk-search uk-search-default">
+                                <span uk-search-icon></span>
+                                <input type="text" name='postBuscado'class="uk-search-input" placeholder="Buscar Posteo...">
+                            </form>
                         
-                    
-                    
-                </ul>
-<p>no entiendo el error porque no lleva el id a la url</p>
+                        </li>
+                    </ul>
+                </div>
+                
+                
             </div>
         </div>
     </main>

@@ -32,23 +32,17 @@
     <%- include("headerDeslogueado") %>
 
     <main>
-        <div class="uk-section uk-section-small">
-            <div class="uk-container uk-container-large uk-flex uk-flex-middle uk-flex-center">
-               
-                <h2>(Mostar resultados de busqueda)</h2>
-                <ul>
-                    <% for( let i = 0; i < usuarios.length; i++) {%>
-                        <li>
-                            <a href="/detalleUsuario/<%= usuarios[i].idUsuario%>"><%= usuarios[i].Nombre_Usuario%></a>
-                        </li>
-                        <%}%>
-                        
-                    
-                    
-                </ul>
-               
-            </div>
-        </div>
+      <ul>
+        <% for( let i = 0; i < posteos.length; i++) {%>
+            <li>
+                <a href="detallePost/14"><%= posteos[i].Texto_Posteo%></a>
+            </li>
+            <%}%>
+           
+       
+       
+    </ul> 
+
     </main>
 
     <footer class="uk-position-bottom uk-position-fixed uk-background-primary uk-flex uk-flex-between uk-flex-middle">

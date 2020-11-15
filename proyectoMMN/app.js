@@ -61,6 +61,9 @@ app.use ("/editarUsuario", rutaEditarUsuario);
 let rutaLogout = require ("./routes/logout");
 app.use ("/logout", rutaLogout);
 
+let rutaPostBuscado = require ("./routes/postBuscado");
+app.use ("/postBuscado", rutaPostBuscado)
+
 //Aca terminan nuestras rutas//
 
 // view engine setup
