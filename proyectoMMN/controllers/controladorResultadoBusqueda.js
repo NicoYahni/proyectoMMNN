@@ -47,7 +47,42 @@ let rutaResultadoBusqueda = {
         
         
           
-    }
+    },
+    post: function(req, res) {
+      let hashtagBuscado = req.query.hashtagBuscado
+      db.Post.findAll(
+          {
+          where:  {
+                
+          Texto_Posteo : {[op.like]: '%' + hashtagBuscado + '%'}
+       
+          
+            }
+          
+          
+          
+        
+      }
+         
+
+      )
+      .then(function(posteos){
+          if (posteos == 0) {
+            res.render('/home')
+            // aca me esta tirando error. esta es la parte en la que habria que mandar un mensaje en la vista resultadoBusqueda.ejs 
+            // que diga. "Lo sentimos! no encontramos ningun usuario"
+          } else {
+            res.render('resultadoBusqueda', {postoes: posteos, usuarioLogueado : req.session.user})
+          }
+
+  
+      
+      })
+
+      
+      
+        
+  }
 }
 
 
