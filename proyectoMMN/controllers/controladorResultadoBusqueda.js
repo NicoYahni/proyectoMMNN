@@ -26,6 +26,7 @@ let rutaResultadoBusqueda = {
             //[
            //{ Nombre_Usuario : {[op.like]: '%' + usuarioBuscado + '%'}},
            //{ Nombre_Usuario : {[op.like]: '%' + usuarioBuscado + '%'}}
+           
            //] 
         }
            
