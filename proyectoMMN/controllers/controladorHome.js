@@ -3,13 +3,12 @@ let op = db.Sequelize.Op;
 let controladorHome = {
 
     home: function(req,res) {
-        db.Post.findAll(
-            {
+        db.Post.findAll({
                 order: ["Fecha_Creacion"]
-            }
-               
-    
-            )
+                // no puedo ordenarlos ni limitarlos
+
+
+            })
         
         .then(function(posteos) {
             console.log(posteos)

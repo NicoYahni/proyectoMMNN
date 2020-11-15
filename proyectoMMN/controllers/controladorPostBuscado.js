@@ -16,10 +16,16 @@ let controladorPostBuscado = {
          {
          where:  {
                 
-          Texto_Posteo : {[op.like]: '%' + postBuscado + '%'}
+          Texto_Posteo : {[op.like]: '%'+ postBuscado + '%'}
        
           
             }
+            // no puedo ordenarlos ni limitarlos
+            // ,
+            
+            // order: ["Fecha_Creacion 'ASC'"],
+            // limit: 5
+          
           
           
           
