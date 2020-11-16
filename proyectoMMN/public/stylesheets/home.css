@@ -4,7 +4,9 @@ article.post{
     margin-bottom: 10px;
    
 }
-
+#posteoEntero{
+    padding: 10px;
+}
 article.post div.info-usuario{
     padding: 10px;
     border-bottom: 1px solid lightgray;

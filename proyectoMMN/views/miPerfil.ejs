@@ -40,14 +40,14 @@
                     </div>
                     <div class="uk-width-2-3 uk-flex uk-flex-column uk-flex-around">
                         <div class="uk-flex uk-flex-middle">
-                            <h3 class="uk-margin-remove"><%=usuarioLogueado.Nombre %>  <%=usuarioLogueado.Apellido %> </h3>
+                            <h3 class="uk-margin-remove"><%=user.Nombre %>  <%=user.Apellido %> </h3>
                             <a href="" uk-icon="icon:cog; ratio: 1.2" class="uk-margin-left"></a>
                         </div>
                        
                        <a href="/editarUsuario"> Edit</a>
                         <div>
                             <ul class="red-usuario uk-flex uk-flex-between uk-width-1-2">
-                                <li>6 posts</li>
+                                <li><%= posteos.length%> posts</li>
                                 <li>255 seguidores</li>
                                 <li>378 seguidos</li>
                             </ul>
@@ -58,49 +58,16 @@
 
                 <section class="muro uk-flex uk-flex-middle uk-flex-center">
                     <div class="uk-grid uk-child-width-1-3 uk-width-1-1 uk-margin-remove" uk-grid>
+                        <% for( let i = 0; i < posteos.length; i++) {%>
                         <div
                             class="uk-card uk-card-hover uk-card-body uk-flex uk-flex-column uk-flex-middle uk-flex-center ">
                             <a href="" class="link-detalle">
-                                <img src="images/imagen1.jpg" alt="foto de perfil" class="foto-perfil">
-                                <p class="uk-text-center">Aprendiendo!</p>
+                                <img src="<%= posteos[i].URL%>" alt="foto de perfil" class="foto-perfil">
+                                <p class="uk-text-center"> <%= posteos[i].Texto_Posteo%></p>
                             </a>
                         </div>
-                        <div
-                            class="uk-card uk-card-hover uk-card-body uk-flex uk-flex-column uk-flex-middle uk-flex-center ">
-                            <a href="" class="link-detalle">
-                                <img src="images/imagen2.jpg" alt="foto de perfil" class="foto-perfil">
-                                <p class="uk-text-center">Pasandola muyy bien!</p>
-                            </a>
-                        </div>
-                        <div
-                            class="uk-card uk-card-hover uk-card-body uk-flex uk-flex-column uk-flex-middle uk-flex-center ">
-                            <a href="" class="link-detalle">
-                                <img src="images/imagen3.jpg" alt="foto de perfil" class="foto-perfil">
-                                <p class="uk-text-center">Programacion</p>
-                            </a>
-                        </div>
-                        <div
-                            class="uk-card uk-card-hover uk-card-body uk-flex uk-flex-column uk-flex-middle uk-flex-center ">
-                            <a href="" class="link-detalle">
-                                <img src="images/imagen4.jpg" alt="foto de perfil" class="foto-perfil">
-                                <p class="uk-text-center">VRC!</p>
-                            </a>
-                        </div>
-                        <div
-                            class="uk-card uk-card-hover uk-card-body uk-flex uk-flex-column uk-flex-middle uk-flex-center ">
-                            <a href="" class="link-detalle">
-                                <img src="images/imagen5.jpg" alt="foto de perfil" class="foto-perfil">
-                                <p class="uk-text-center">Lorem ipsum</p>
-                            </a>
-                        </div>
-                        <div
-                            class="uk-card uk-card-hover uk-card-body uk-flex uk-flex-column uk-flex-middle uk-flex-center ">
-                            <a href="" class="link-detalle">
-                                <img src="images/imagen6.jpg" alt="foto de perfil" class="foto-perfil">
-                                <p class="uk-text-center">programando ando</p>
-                            </a>
-                        </div>
-
+                       <%}%>
+                      
 
 
                     </div>
