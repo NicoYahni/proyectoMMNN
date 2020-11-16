@@ -22,8 +22,7 @@ let rutaRegistracion = {
         // no me deja encriptar la respuesta de seguridad. cuando la mando encriptada me queda cargando en el registro
         // cuando va normal se manda bien
          let respuesta = bcrypt.hashSync(req.body.respuestaSeguridad)
-    
-        
+
         let usuario = {
             Nombre : nombre,
             Apellido : apellido,
@@ -32,8 +31,7 @@ let rutaRegistracion = {
             Password : password,
             Nacimiento : fecnac,
             Pregunta_Seguridad : pregunta,
-            Respuesta_Seguridad : respuesta
-            
+            Respuesta_Seguridad : respuesta         
         }
         console.log(usuario)  
         
@@ -43,8 +41,6 @@ let rutaRegistracion = {
         res.redirect("/home")
         })
     }
-   
-
 }
 
 

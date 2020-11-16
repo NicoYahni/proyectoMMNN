@@ -20,9 +20,6 @@ let rutaResultadoBusqueda = {
                   }
                 ]
               }
-            
-            
-            
             //[
            //{ Nombre_Usuario : {[op.like]: '%' + usuarioBuscado + '%'}},
            //{ Nombre_Usuario : {[op.like]: '%' + usuarioBuscado + '%'}}
@@ -40,18 +37,9 @@ let rutaResultadoBusqueda = {
             } else {
               res.render('resultadoBusqueda', {usuarios: usuarios, usuarioLogueado : req.session.user})
             }
-
-    
-        
-        })
-
-        
-        
-          
+        })  
     }
         
   
 }
-
-
 module.exports = rutaResultadoBusqueda

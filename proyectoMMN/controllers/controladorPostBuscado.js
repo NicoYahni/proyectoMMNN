@@ -25,11 +25,6 @@ let controladorPostBuscado = {
             
             // order: ["Fecha_Creacion 'ASC'"],
             // limit: 5
-          
-          
-          
-          
-        
       }
          
 
@@ -42,14 +37,7 @@ let controladorPostBuscado = {
           } else {
             res.render('postBuscadoResultado', {posteos: posteos, usuarioLogueado : req.session.user})
           }
-
-  
-      
-      })
-
-      
-      
-        
+      })    
   }
 }
 
