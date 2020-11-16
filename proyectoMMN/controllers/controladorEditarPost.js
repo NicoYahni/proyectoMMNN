@@ -21,7 +21,23 @@ let usuario = req.body;
                     res.redirect("/miPerfil");
                 })
               
-        }
+        },
+        eliminar: function(req, res) {
+           
+        
+     let idPost = req.body.idPost; 
+                 db.Post.destroy(
+                    {
+                     where:{ 
+                         idPost: idPost
+                     } 
+                    })
+                    .then(function(){
+                         res.redirect("/home");
+                     })
+                   
+             }
+
 }
 
 

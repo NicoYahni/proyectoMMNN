@@ -45,7 +45,8 @@
                             <h3><a href="/detalleUsuario/<%= post.Id_usuario%>"><%= post.Id_usuario%></a></h3>
                         </div>
 
-                        <form action="" method="POST">
+                        <form action="/editarPost/eliminar" method="POST">
+                            <input type="hidden" name="idPost"value="<%=post.IdPost %>">
                             <button type="submit">Borrar posteo </button>
                         </form>
 
