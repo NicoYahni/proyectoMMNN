@@ -4,13 +4,13 @@ let controladorEditarPost = {
     editarPost: function(req, res) {
        let idPost = req.params.id
        //let idUsuario = req.body.idUsuario
-       console.log(idPost);
+       //console.log(idPost);
 
        db.Post.findByPk(idPost)
        .then(function(post){
            //console.log(post);
-          // res.render('editarPost', {post: post})
-          res.send(post)
+          res.render('editarPost', {post: post})
+          //res.send(post)
        })
 
 
