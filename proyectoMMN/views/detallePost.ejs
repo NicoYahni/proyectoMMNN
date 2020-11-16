@@ -50,8 +50,10 @@
                             <button type="submit">Borrar posteo </button>
                         </form>
 
-                        <form action="" method="POST">
-                            <a href="/editarPost"> Edit</a>
+                        <form action="/editarPost" method="POST">
+                            <input type="hidden" name="idPost" value="<%=post.IdPost%>">
+                            <input type="hidden" name="idUsuario" value="<%=post.Id_usuario%>">
+                            <a href="/editarPost/<%=post.IdPost%>"> Edit</a>
                         </form>
                         
                         <div class="lista-comentarios" >

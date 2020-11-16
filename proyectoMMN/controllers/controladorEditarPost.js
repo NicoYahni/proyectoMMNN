@@ -1,27 +1,38 @@
 let db = require('../db/models/index')
-let rutaEditarPost = {
+let controladorEditarPost = {
 
     editarPost: function(req, res) {
-       // res.render("editarUsuario", {usuarioLogueado : req.session.user}) 
-       console.log(req.session.user);
-        if (req.session.user == undefined){
-            res.redirect("/login");
-        
-            }
-let usuario = req.body; 
-            db.Usuario.update({
-                Texto_Posteo: usuario.Texto_Posteo, 
-                URL: usuario.URL,
-                Fecha_Creacion: usuario.Fecha_Creacion,
-                Id_usuario:usuario.Id_usuario,
-            
-            }, {
-                where:{ idUsuario: req.session.user.idUsuario
-                } }).then(()=> {
-                    res.redirect("/miPerfil");
-                })
-              
+       let idPost = req.params.id
+       //let idUsuario = req.body.idUsuario
+
+       db.Post.findByPk(idPost)
+       .then(function(post){
+           res.render('editarPost', {post: post})
+       })
+
+
         },
+        update: function(req,res){
+            let post = {
+                IdPost: req.body.IdPost,
+                Id_usuario: req.body.Id_usuario,
+                Texto_Posteo: req.body.textoPublicado,
+                URL: req.body.url,
+                Fecha_Creacion: req.body.Fecha_Creacion
+
+            }
+            db.Post.update(post,
+                {
+                 where:{ 
+                     idPost: req.body.IdPost
+                 } 
+                })
+                .then(function(){
+                    res.redirect('home')
+                })
+        },
+
+
         eliminar: function(req, res) {
            
         
@@ -41,4 +52,4 @@ let usuario = req.body;
 }
 
 
-module.exports = rutaEditarPost
+module.exports = controladorEditarPost
