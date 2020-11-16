@@ -36,7 +36,7 @@ let controladorPostBuscado = {
       )
       .then(function(posteos){
           if (posteos == 0) {
-            res.render('/home')
+            res.send('Lo sentimos! no encontramos resultados para tu busqueda!')
             // aca me esta tirando error. esta es la parte en la que habria que mandar un mensaje en la vista resultadoBusqueda.ejs 
             // que diga. "Lo sentimos! no encontramos ningun usuario"
           } else {
