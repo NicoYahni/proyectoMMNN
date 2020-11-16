@@ -45,16 +45,27 @@
                             <h3><a href="/detalleUsuario/<%= post.Id_usuario%>"><%= post.Id_usuario%></a></h3>
                         </div>
 
-                        <form action="/editarPost/eliminar" method="POST">
-                            <input type="hidden" name="idPost"value="<%=post.IdPost %>">
-                            <button type="submit">Borrar posteo </button>
-                        </form>
+                       
+<% if (usuarioLogueado == undefined) {%>
 
+    <% } else if(usuarioLogueado.idUsuario != post.Id_usuario) {%>
+    
+    <% } else if (usuarioLogueado.idUsuario == post.Id_usuario) { %>
+        
+        <form action="/editarPost/eliminar" method="POST">
+            <input type="hidden" name="idPost"value="<%=post.IdPost %>">
+            <button type="submit">Borrar posteo </button>
+        </form>
+    
                         <form action="/editarPost" method="GET">
                             <input type="hidden" name="idPost" value="<%=post.IdPost%>">
                             <input type="hidden" name="idUsuario" value="<%=post.Id_usuario%>">
                             <a href="/editarPost/<%=post.IdPost%>"> Edit</a>
                         </form>
+    
+    
+
+<%}%>
                         
                         <div class="lista-comentarios" >
                             <div class="comentario uk-flex uk-flex-middle uk-margin-small-top">
