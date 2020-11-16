@@ -45,11 +45,7 @@
                             <h3><a href="/detalleUsuario/<%= post.Id_usuario%>"><%= post.Id_usuario%></a></h3>
                         </div>
 
-                        <form action="/editarPost" method="GET">
-                            <input type="hidden" name="idPost" value="<%=post.IdPost%>">
-                            <input type="hidden" name="idUsuario" value="<%=post.Id_usuario%>">
-                            <a href="/editarPost/<%=post.IdPost%>"> Edit</a>
-                        </form>
+                       
                        
 <% if (usuarioLogueado == undefined) {%>
 
@@ -61,7 +57,11 @@
             <input type="hidden" name="idPost"value="<%=post.IdPost %>">
             <button type="submit">Borrar posteo </button>
         </form>
-    
+        <form action="/editarPost" method="GET">
+            <input type="hidden" name="idPost" value="<%=post.IdPost%>">
+            <input type="hidden" name="idUsuario" value="<%=post.Id_usuario%>">
+            <a href="/editarPost/<%=post.IdPost%>"> Editar posteo</a>
+        </form>
     
     
 
