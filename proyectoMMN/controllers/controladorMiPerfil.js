@@ -6,7 +6,7 @@ let controladorMiPerfil = {
          //   res.redirect("/login");
            // }
             
-        let idUsuario = req.params.id
+        let idUsuario = req.session.user.idUsuario
 
         db.Usuario.findByPk(idUsuario)
         .then (function(usuario){
