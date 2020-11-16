@@ -13,7 +13,7 @@ let controladorHome = {
             })
         
         .then(function(posteos) {
-            console.log(posteos)
+            console.log(req.session.user)
         res.render('home', {posteos: posteos, usuarioLogueado : req.session.user})
         })
         

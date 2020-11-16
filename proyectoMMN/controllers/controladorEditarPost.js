@@ -2,11 +2,12 @@ let db = require('../db/models/index')
 let controladorEditarPost = {
 
     editarPost: function(req, res) {
-       let idPost = req.params.id;
+       let idPost = req.params.id
        
        //let idUsuario = req.body.idUsuario
        //console.log(idPost);
        console.log('sarasa');
+       console.log(idPost);
        db.Post.findByPk(idPost)
        .then(function(post){
            
@@ -34,7 +35,7 @@ let controladorEditarPost = {
         update: function(req,res){
             let post = {
                 IdPost: req.body.IdPost,
-                Id_usuario: req.body.Id_usuario,
+                Id_usuario: req.session.user.idUsuario,
                 Texto_Posteo: req.body.textoPublicado,
                 URL: req.body.url,
                 Fecha_Creacion: req.body.Fecha_Creacion
@@ -49,7 +50,7 @@ let controladorEditarPost = {
                 })
                 .then(function(){
                     console.log('paso por aca');
-                    res.redirect('home')
+                    res.redirect('/home')
                 })
         }
 

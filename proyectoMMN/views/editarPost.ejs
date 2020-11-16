@@ -37,10 +37,9 @@
                         <div class="titulo"><h1>Editar Post</h1></div> <br>
                        <div class="contenedor-formulario">
                            <form id="agregarPost" class="agregarPost" action="/editarPost/update" method="post">
-                            <input type="url" name="url" placeholder="Agrega tu foto aca!" id="picture" value="<%= post.URL%>"><%= post.URL%><br>
+                            <input type="url" name="url" placeholder="Agrega tu foto aca!" id="picture" value="<%= post.URL%>"><br>
                             <input type="textarea" id="txtPublicacion" placeholder="Escribi tu post aca!" class="textoPublicado" name="textoPublicado" value="<%= post.Texto_Posteo%>"><br>
                             <input type="date" name="Fecha_Creacion" id="" value="<%= post.Fecha_Creacion%>">
-                            <input type="hidden" name="Id_usuario" id="" value="<%=usuarioLogueado.idUsuario%>">
                             <input type="hidden" name="IdPost" id="" value="<%=post.IdPost%>">
                             <input type="submit" class="botonPost" placeholder="Enviar">
                           </form>
