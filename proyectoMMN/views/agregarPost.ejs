@@ -39,7 +39,7 @@
                             <input type="url" name="url" placeholder="Agrega tu foto aca!"id="picture" ><br>
                             <input type="textarea" id="txtPublicacion" placeholder="Escribi tu post aca!" class="textoPublicado" name="textoPublicado"><br>
                             <input type="date" name="Fecha_Creacion" id="">
-                            <input type="text" name="Id_usuario" id="">
+                            <input type="hidden" name="Id_usuario" id="" value="<%= user.idUsuario%>">
                             <input type="submit" class="botonPost" placeholder="Enviar">
                           </form>
                         </div> 

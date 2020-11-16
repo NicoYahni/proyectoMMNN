@@ -6,6 +6,8 @@ let controladorHome = {
         db.Post.findAll({
                 order: ["Fecha_Creacion"]
                 // no puedo ordenarlos ni limitarlos
+                //order: ["Fecha_Creacion" , "ASC"]
+                
 
 
             })
@@ -14,16 +16,6 @@ let controladorHome = {
             console.log(posteos)
         res.render('home', {posteos: posteos, usuarioLogueado : req.session.user})
         })
-        
-
-          
-    },
-    detalle: function(req,res) {
-        //db.Post.findAll()
-        //.then(function(posteos) {
-          //  console.log(posteos)
-        //res.render('home', {posteos: posteos})
-        //})
         
 
           
