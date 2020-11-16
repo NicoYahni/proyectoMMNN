@@ -2,14 +2,15 @@ let db = require('../db/models/index')
 let controladorEditarPost = {
 
     editarPost: function(req, res) {
-       let idPost = req.params.id
+       let idPost = req.params.id;
+       
        //let idUsuario = req.body.idUsuario
        //console.log(idPost);
-
+       console.log('sarasa');
        db.Post.findByPk(idPost)
        .then(function(post){
-           //console.log(post);
-          res.render('editarPost', {post: post})
+           
+          res.render('editarPost', {post: post, usuarioLogueado: req.session.user})
           //res.send(post)
        })
 
@@ -37,6 +38,7 @@ let controladorEditarPost = {
                 Texto_Posteo: req.body.textoPublicado,
                 URL: req.body.url,
                 Fecha_Creacion: req.body.Fecha_Creacion
+                
 
             }
             db.Post.update(post,
@@ -46,6 +48,7 @@ let controladorEditarPost = {
                  } 
                 })
                 .then(function(){
+                    console.log('paso por aca');
                     res.redirect('home')
                 })
         }

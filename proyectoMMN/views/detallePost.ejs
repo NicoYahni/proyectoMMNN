@@ -27,9 +27,9 @@
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.5/dist/js/uikit.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.5/dist/js/uikit-icons.min.js"></script>
 </head>
-
+  
 <body>
-    <%- include("headerDeslogueado") %>
+  <%- include("headerDeslogueado") %>
     
 
     <main>
@@ -54,15 +54,11 @@
     <% } else if (usuarioLogueado.idUsuario == post.Id_usuario) { %>
         
         <form action="/editarPost/eliminar" method="POST">
-            <input type="hidden" name="idPost"value="<%=post.IdPost %>">
+            <input type="hidden" name="idPost" value="<%=post.IdPost %>">
             <button type="submit">Borrar posteo </button>
         </form>
-        <form action="/editarPost" method="GET">
-            <input type="hidden" name="idPost" value="<%=post.IdPost%>">
-            <input type="hidden" name="idUsuario" value="<%=post.Id_usuario%>">
-            <a href="/editarPost/<%=post.IdPost%>"> Editar posteo</a>
-        </form>
-    
+       
+    <a href="editarPost/<%=post.IdPost%>"> Editar posteo</a>
     
 
 <%}%>

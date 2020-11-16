@@ -18,17 +18,17 @@
                         <ul class="uk-flex uk-flex-between uk-flex-middle">
                             <li><a href="/home">Home</a></li>
                             <li><a href="/postBuscado">Buscar Posts</a></li>
-                            <% 
-                            if(usuarioLogueado != undefined) { %>
-                                    <li><a href="/agregarPost">Agregar Post</a></li>
-                                      <li><a href="/miPerfil"><%= usuarioLogueado.Nombre%></a></li>
-                                      <li> <a href="/logout">Logout</a></li>
-                           <% } else { %>
-
-                             <li><a href="/login">LogIn</a></li>
-                            <li><a href="/registracion">Registrarse</a></li>
-                          <%  }%>
                             
+                            <%  if(usuarioLogueado != undefined) { %>
+                                <li><a href="/agregarPost">Agregar Post</a></li>
+                                  <li><a href="/miPerfil"><%= usuarioLogueado.Nombre%></a></li>
+                                  <li> <a href="/logout">Logout</a></li>
+                       <% } else { %>
+
+                         <li><a href="/login">LogIn</a></li>
+                        <li><a href="/registracion">Registrarse</a></li>
+                      <%  }%>
+                        
                             
                            
                         </ul>
@@ -38,7 +38,7 @@
                             <li>
                                 <form action="./resultadoBusqueda" method= "GET" class="uk-search uk-search-default">
                                     <span uk-search-icon></span>
-                                    <input type="text" name='usuarioBuscado'class="uk-search-input" placeholder="Buscar...">
+                                    <input type="text" name='usuarioBuscado' class="uk-search-input" placeholder="Buscar...">
                                 </form>
                             
                             </li>

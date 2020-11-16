@@ -1,4 +1,5 @@
 let db = require('../db/models/index')
+let bcrypt = require("bcryptjs");
 let rutaEditarPerfil = {
 
     editarPerfil: function(req, res) {
@@ -9,16 +10,18 @@ let rutaEditarPerfil = {
         
             }
 let usuario = req.body; 
+let password = bcrypt.hashSync(usuario.Password)
             db.Usuario.update({
                 Nombre: usuario.Nombre, 
                 Apellido: usuario.Apellido,
                 NombreUsuario: usuario.NombreUsuario,
                 Mail:usuario.Mail,
-                Password:usuario.Password
+                Password:password
             
             }, {
                 where:{ idUsuario: req.session.user.idUsuario
-                } }).then(()=> {
+                } }).then((user)=> {
+                    
                     res.redirect("/miPerfil");
                 })
               
