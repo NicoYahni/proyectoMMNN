@@ -31,6 +31,16 @@ module.exports = (sequelize, DataTypes) => {
     }
 
     let Post = sequelize.define("Post", cols, config);
+    Post.associate = function(models){
+        //aca adentro explico la relacion
+    Post.belongsTo(models.Usuario,{
+        as:"relacion",
+        foreignKey: 'id_Usuario'
+    } )
+   // Post.belongsToMany(models.Comentario, )
+        
 
+    }
+    
     return Post;
 }

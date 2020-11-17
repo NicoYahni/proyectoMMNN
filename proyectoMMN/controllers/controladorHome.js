@@ -4,7 +4,10 @@ let controladorHome = {
 
     home: function(req,res) {
         db.Post.findAll({
-                order: ["Fecha_Creacion"]
+            include:[
+                {association: "relacion"}
+            ]
+                //order: ["Fecha_Creacion"]
                 // no puedo ordenarlos ni limitarlos
                 //order: ["Fecha_Creacion" , "ASC"]
                 
