@@ -61,7 +61,7 @@
                         <% for( let i = 0; i < posteos.length; i++) {%>
                         <div
                             class="uk-card uk-card-hover uk-card-body uk-flex uk-flex-column uk-flex-middle uk-flex-center ">
-                            <a href="" class="link-detalle">
+                            <a href="detallePost/<%= posteos[i].IdPost%>" class="link-detalle">
                                 <img src="<%= posteos[i].URL%>" alt="foto de perfil" class="foto-perfil">
                                 <p class="uk-text-center"> <%= posteos[i].Texto_Posteo%></p>
                             </a>

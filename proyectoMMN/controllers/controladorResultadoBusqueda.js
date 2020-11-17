@@ -28,7 +28,7 @@ let rutaResultadoBusqueda = {
         .then(function(usuarios){
             if (usuarios== 0) {
               
-              res.send('Lo sentimos! no encontramos resultados para tu busqueda!')
+              res.send('Lo sentimos! no encontramos resultados para tu busqueda! Recorda que este buscador solo busca hashtagsen el posteo! no palabras!')
             
             } else {
               res.render('resultadoBusqueda', {usuarios: usuarios, usuarioLogueado : req.session.user})
