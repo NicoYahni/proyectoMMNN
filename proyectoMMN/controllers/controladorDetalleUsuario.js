@@ -1,7 +1,21 @@
 const db = require("../db/models/index")
 let controladorDetalleUsuario = {
 
-   
+  detalleUsuario: function(req, res) {
+    console.log('ACA ESTOY');
+    let idUsuario = req.params.id
+
+    db.Usuario.findByPk(idUsuario, {
+      include: [
+       {association: "relacion"}
+      ]
+     }) 
+    .then (function(usuario){
+        res.render("detalleUsuario", {usuario: usuario, usuarioLogueado : req.session.user}) 
+    })
+      
+},
+
     postUsuario: function(req, res) {
         console.log('LLEGUE O NO LLEGUE');
         let idUsuario = req.params.id
@@ -25,17 +39,8 @@ let controladorDetalleUsuario = {
         console.log('lo mandoooooo')
       })
           
-    },
-    detalleUsuario: function(req, res) {
-      console.log('ACA ESTOY');
-      let idUsuario = req.params.id
-      db.Usuario.findByPk(idUsuario)
-      .then (function(usuario){
-          res.render("detalleUsuario", {usuario: usuario, usuarioLogueado : req.session.user}) 
-      })
-        
-  }
-
+    }
+   
 }
 
 

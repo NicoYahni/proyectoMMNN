@@ -43,10 +43,13 @@
                         <div class="info-post uk-flex uk-flex-middle">
                             <img src="https://via.placeholder.com/35" alt="Foto del usuario">
                             <h3><a href="/detalleUsuario/<%= post.Id_usuario%>"><%= post.relacion.Nombre%></a></h3>
+                            
                         </div>
 
-                       
-                       
+                        <br>
+                        <br>
+                        <p><%=post.Texto_Posteo%></p>
+                        <br>
 <% if (usuarioLogueado == undefined) {%>
 
     <% } else if(usuarioLogueado.idUsuario != post.Id_usuario) {%>
@@ -62,6 +65,8 @@
     <!---->
 
 <%}%>
+
+<br><br>
                         
                         <div class="lista-comentarios" >
                             <div class="comentario uk-flex uk-flex-middle uk-margin-small-top">

@@ -50,7 +50,16 @@
                                         <div>
                                             <img src="https://via.placeholder.com/40" alt="">
                                         </div>
-                                        <div><a href="/detalleUsuario/<%= posteos[i].Id_usuario%>"><%= posteos[i].relacion.Nombre%></a></div>
+                                        <% if (usuarioLogueado == undefined) {%>
+                                <div><a href="/detalleUsuario/<%= posteos[i].Id_usuario%>"><%= posteos[i].relacion.Nombre%></a></div>
+                                            <% } else if(usuarioLogueado.idUsuario != posteos[i].Id_usuario) {%>
+                                                <div><a href="/detalleUsuario/<%= posteos[i].Id_usuario%>"><%= posteos[i].relacion.Nombre%></a></div>
+                                            <% } else if (usuarioLogueado.idUsuario == posteos[i].Id_usuario) { %>
+                                                <div><a href="/miPerfil"><%= posteos[i].relacion.Nombre%></a></div>
+                                        
+                                        <%}%>
+
+                                        
                                         
                                     </div>
                                     <div class="post-body uk-flex uk-flex-center">
