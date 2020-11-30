@@ -1,6 +1,6 @@
 const bcrypt = require ('bcryptjs');
 const db = require('../db/models');
-const users = db.Usuario;
+const users = db.Usuario;                       //users es lo mismo a db.Usuario
 
 const op = db.Sequelize.Op;
 
@@ -10,15 +10,15 @@ let controladorLogin = {
         },
 
 
-        login: function(req, res){
+        login: function(req, res){              //busca en la base de datos toda la informacion del usuario que acaba de ingresas
             users.findOne({
-                where: [{ Nombre_Usuario: req.body.user }]
+                where: [{ Nombre_Usuario: req.body.user }] 
             })
-            .then( function (user) {
+            .then( function (user) {            
                 console.log(req.body)
                 console.log(user)
                 if(user == null) {
-                    return res.send("Usuario y/o contraseña incorrecto")
+                    return res.send("Usuario incorrecto")
                 } 
                 else if (bcrypt.compareSync(req.body.password, user.Password) == false) {
                     return res.send("contraseña incorrecta")
@@ -33,7 +33,7 @@ let controladorLogin = {
                 }
 
             })
-            .catch( e => console.log(e))
+            .catch( e => console.log(e))                            //busca el error
 
            
 

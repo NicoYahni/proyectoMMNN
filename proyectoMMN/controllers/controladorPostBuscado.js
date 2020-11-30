@@ -1,5 +1,5 @@
 let db = require('../db/models/index')
-let op = db.Sequelize.Op;
+let op = db.Sequelize.Op;                   //cuando queres usar otro operador que no sea where, lo declaras aca.
 let controladorPostBuscado = {
 
   buscador: function(req, res) {
@@ -11,12 +11,14 @@ let controladorPostBuscado = {
 
    resultado: function(req, res) {
      
-   let postBuscado = req.query.postBuscado
-     db.Post.findAll(
+   let postBuscado = req.query.postBuscado      //AL SER POR GET LA INFORMACION QUE ESCRIBA VIAJA A LA URL BAJO LA CLAVE QUE PUSIMOS DE NAME EN LA VISTA (EN ESTE CASO ES "postBuscado").
+                                                // con req.query traigo la inofromacion de la url que esta bajo el nombre "postBuscado"
+
+     db.Post.findAll(                           //Busca de la columna de posteos todos los posteos
          {
-         where:  {
+         where:  {                              // aca voy a hacer un FILTRO
                 
-          Texto_Posteo : {[op.like]: "#" +'%'+ postBuscado + '%'}
+          Texto_Posteo : {[op.like]: "#" +'%'+ postBuscado + '%'}   //para que busque que contenga lo que busque de la columna de Texteo_Posteo
           //"#"+
           
             }
@@ -29,7 +31,7 @@ let controladorPostBuscado = {
          
 
       )
-      .then(function(posteos){
+      .then(function(posteos){                            //despues de la promesa (findAll) hace esto:
           if (posteos == 0) {
             res.send('Lo sentimos! no encontramos resultados para tu busqueda!')
             

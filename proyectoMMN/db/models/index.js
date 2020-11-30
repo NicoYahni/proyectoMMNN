@@ -1,3 +1,5 @@
+//TODA LA CONEXION CON LA BASE DE DATOS
+
 'use strict';
 
 const fs = require('fs');

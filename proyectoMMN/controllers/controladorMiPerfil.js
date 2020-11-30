@@ -20,12 +20,12 @@ let controladorMiPerfil = {
 
         informacion: function(req, res) {
           console.log('LLEGUE O NO LLEGUE');
-          let idUsuario = req.session.user.idUsuario
-          db.Post.findAll(
+          let idUsuario = req.session.user.idUsuario        //la informacion del usuario ya esta guardad en la session porque ya esta logeado. Y si no esta logeado no puede entrar a "miPerfil"
+          db.Post.findAll(                                  //todos los posteos que haya hecho este usuario
             {
             where:  {
                    
-              Id_usuario : idUsuario
+              Id_usuario : idUsuario                        // es un "match" del id del que hizo log in con la info del mismo id que tiene los posteos en la base de datos
            
              
                }

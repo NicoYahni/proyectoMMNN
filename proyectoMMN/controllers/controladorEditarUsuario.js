@@ -1,6 +1,6 @@
 let db = require('../db/models/index')
 let rutaEditarUsuario = {
-
+                                                                                    //NO ANDA
     editarUsuario: function(req, res) {
        // res.render("editarUsuario", {usuarioLogueado : req.session.user}) 
        console.log(req.session.user);
